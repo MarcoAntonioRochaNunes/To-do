@@ -29,6 +29,9 @@ body {
     width: 100px;
     background-color: var(--color-primary);
 }
+.side-bar img {
+    max-width: 100%;
+}
 
 nav {
     height: 100px;
@@ -43,6 +46,10 @@ nav {
 .btn {
     padding: 15px 30px;
     border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+    transform: scale(1.05);
 }
 
 a.btn {
@@ -63,19 +70,37 @@ section.graph {
     width: 33%;
     padding: 5px;
 }
-
+.content-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .graph_header {
     display: flex;
     justify-content: space-between;
 }
 .graph_header h2 {
     display: inline-block;
+    font-size: 1.075rem;
 }
-
+.graph_header-date {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
 .graph_header hr {
     width: 130px;
 }
-
+.graph_header h2::after {
+    display: inline-block;
+    content: "";
+    border: solid 1px rgb(0, 0, 0, 0.1);
+    width: 70px;
+    margin-left: 15px;
+    margin-right: 15px;
+    position: relative;
+}
 .graph_header-subtitle {
     margin-top: 10px;
 }
@@ -84,23 +109,28 @@ section.graph {
     background-color: #ccc;
     width: 300px;
     height: 300px;
-    margin-top: 20px;
-    margin-left: 35px;
+    margin-top: 50px;
+
+    background: url("../images/graph.png");
+    background-size: contain;
+    /* width: 50%;
+    margin: 0 auto; */
 }
 
-.graph_header-tasks_left {
-    text-align: center;
-    margin-top: 10px;
+.task_left_footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
 }
+
 .list {
     flex: 1;
     padding: 5px 15px;
 }
 .list_header {
     display: flex;
-}
-
-.list_header-select {
 }
 
 .task_list {
@@ -118,19 +148,19 @@ section.graph {
     padding: 30px 15px;
     margin-bottom: 10px;
     border-bottom: 1px solid var(--background-light);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
 .task:hover {
-    background-color: var(--color-primary);
-    transition: 0.3s;
+    transform: scale(1.05);
+    background-color: var(--background-light);
 }
 
 .priority,
 .title {
     display: flex;
     align-items: center;
-}
-.title {
 }
 
 .task_title {
@@ -140,10 +170,22 @@ section.graph {
 .action {
     padding-right: 10px;
 }
+.action a {
+    margin-left: 20px;
+    color: #0a0040;
+}
+.action > a:hover {
+}
 .sphere {
     width: 15px;
     height: 15px;
     background-color: red;
     border-radius: 50%;
     margin-right: 10px;
+}
+.list_header-select {
+    background-color: transparent;
+    border: none;
+    border-radius: 1px;
+    font-weight: 600;
 }

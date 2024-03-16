@@ -16,7 +16,9 @@
 </head>
 <body>
     <div class="container">
-        <div class="side-bar">LOGO</div>
+        <div class="side-bar">
+            <img src="assets/images/logo.png" alt="Logo">
+        </div>
         <div class="content">
             <nav>
                 <a href="#" class="btn btn-primary">+ Nova Tarefa </a>
@@ -26,20 +28,27 @@
                 <section class="graph">
                     <div class="graph_header">
                         <h2>Progresso do Dia</h2>
-                        <hr>
-                        data
+                        <div class="graph_header-date">
+                            <img src="assets/images/icon-prev.png" alt="">
+                            01 de abril
+                            <img src="assets/images/icon-next.png" alt="">
+                        </div>
                     </div>
 
                     <div class="graph_header-subtitle">
                         Tarefas: <b>3/6</b>
                     </div>
 
-                    <div class="graph-placeholder">
-                        a
+                    <div class="content-placeholder">
+                        <div class="graph-placeholder">
+
+                        </div>
                     </div>
 
-                    <p class="graph_header-tasks_left">Restam 3 Tarefas a serem concluídas</p>
-
+                    <div class="task_left_footer">
+                        <img src="assets/images/icon-info.png" alt="">
+                        Restam 3 Tarefas a serem concluídas
+                    </div>
                 </section>
 
                 <section class="list">
@@ -50,20 +59,6 @@
                     </div>
 
                     <div class="task_list">
-                       <div class="task">
-                            <div class="title">
-                                <input type="checkbox" name="" id="">
-                                <div class="task_title">Titulo da tarefa</div>
-                            </div>
-                            <div class="priority">
-                                <div class="sphere"></div>
-                                <h6>Alta Prioridade</h6>
-                            </div>
-                            <div class="action">
-                                <div class="btn_action">Editar - Excluir</div>
-                            </div>
-
-                       </div>
 
                        <div class="task">
                             <div class="title">
@@ -75,10 +70,18 @@
                                 <h6>Alta Prioridade</h6>
                             </div>
                             <div class="action">
-                                <div class="btn_action">Editar - Excluir</div>
+                                <div class="btn_action">
+                                    <a href="#">
+                                        <img src="assets/images/icon-edit.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img src="assets/images/icon-delete.png" alt="">
+                                    </a>
+                                </div>
                             </div>
 
                        </div>
+
                     </div>
                 </section>
         </div>
